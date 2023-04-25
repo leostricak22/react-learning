@@ -1,17 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+// eslint-disable-next-line no-unused-vars
+function render_html(){
+    // Code is displayed in <div id="root"></div>
+    const element = React.createElement("h1",{},"Hello World!");
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(element);
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function render_html_JSX(){
+    // Code is displayed in <div id="root"></div>
+    const element = <h1>Hello World, 2+2={2+3}</h1>;
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(element);
+}
+
+//render_html()
+render_html_JSX()
